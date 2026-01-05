@@ -26,10 +26,10 @@ const MovieDetails = () => {
     const fetchMovieData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://https://cinemindmovies-rad-project.onrender.com/api/movies/${id}`);
+        const response = await axios.get(`https://cinemindmovies-rad-project.onrender.com/api/movies/${id}`);
         setMovie(response.data);
 
-        const allMoviesResponse = await axios.get('http://https://cinemindmovies-rad-project.onrender.com/api/movies');
+        const allMoviesResponse = await axios.get('https://cinemindmovies-rad-project.onrender.com/api/movies');
         const allMovies: Movie[] = allMoviesResponse.data;
 
         const recommended = allMovies

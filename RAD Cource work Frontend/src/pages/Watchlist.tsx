@@ -23,7 +23,7 @@ const Watchlist = () => {
   const fetchWatchlist = async () => {
     const token = localStorage.getItem('token');
     try {
-      const response = await axios.get('http://https://cinemindmovies-rad-project.onrender.com/api/users/watchlist', {
+      const response = await axios.get('https://cinemindmovies-rad-project.onrender.com/api/users/watchlist', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setWatchlist(response.data);
@@ -37,7 +37,7 @@ const Watchlist = () => {
   const removeFromWatchlist = async (movieId: string) => {
     const token = localStorage.getItem('token');
     try {
-      await axios.put('http://https://cinemindmovies-rad-project.onrender.com/api/users/watchlist/remove', 
+      await axios.put('https://cinemindmovies-rad-project.onrender.com/api/users/watchlist/remove', 
         { movieId }, 
         { headers: { Authorization: `Bearer ${token}` } }
       );

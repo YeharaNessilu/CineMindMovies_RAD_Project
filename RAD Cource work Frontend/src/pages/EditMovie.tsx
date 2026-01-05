@@ -39,7 +39,7 @@ const EditMovie = () => {
     if (!movieData) {
       const fetchMovie = async () => {
         try {
-          const res = await axios.get(`http://https://cinemindmovies-rad-project.onrender.com/api/movies/${id}`);
+          const res = await axios.get(`https://cinemindmovies-rad-project.onrender.com/api/movies/${id}`);
           const movie = res.data;
           
           setTitle(movie.title);
@@ -67,7 +67,7 @@ const EditMovie = () => {
     const token = localStorage.getItem('token');
 
     try {
-      await axios.put(`http://https://cinemindmovies-rad-project.onrender.com/api/movies/${id}`, {
+      await axios.put(`https://cinemindmovies-rad-project.onrender.com/api/movies/${id}`, {
         title,
         description,
         genre,

@@ -8,7 +8,7 @@ const AdminStats = () => {
     const fetchStats = async () => {
       const token = localStorage.getItem('token');
       try {
-        const res = await axios.get('http://https://cinemindmovies-rad-project.onrender.com/api/users/stats', {
+        const res = await axios.get('https://cinemindmovies-rad-project.onrender.com/api/users/stats', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setStats(res.data);
