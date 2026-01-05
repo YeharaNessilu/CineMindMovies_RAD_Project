@@ -46,12 +46,3 @@ If you want to run this project locally, follow these steps:
 ```bash
 git clone [https://github.com/YeharaNessilu/CineMindMovies_RAD_Project.git](https://github.com/YeharaNessilu/CineMindMovies_RAD_Project.git)
 cd CineMindMovies_RAD_Project
-cd "RAD Cource work bakend"
-npm install
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-PORT=5000
-npm start
-cd "../RAD Cource work Frontend"
-npm install
-npm run dev
