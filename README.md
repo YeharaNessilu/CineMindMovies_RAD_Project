@@ -51,14 +51,14 @@ cd CineMindMovies_RAD_Project
 Navigate to the backend folder and install dependencies:
 ---
 
-```bash
+
 cd "RAD Cource work bakend"
 npm install
 
 ### 3. Frontend Setup
 Navigate to the frontend folder and install dependencies:
----
-```bash
+
+
 cd "../RAD Cource work Frontend"
 npm install
 ---
