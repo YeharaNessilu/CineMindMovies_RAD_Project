@@ -66,7 +66,7 @@ npm install
 
 | Login Page | Home Page |
 |------------|-----------|
-| ![Login](https://via.placeholder.com/300x200?text=Login+Page) | ![Home](https://via.placeholder.com/300x200?text=Home+Page) |
+| ./images/Screenshot 2026-01-05 141846.png | !images/Screenshot 2026-01-05 141819.png|
 
 ---
 
