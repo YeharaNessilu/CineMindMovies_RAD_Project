@@ -7,7 +7,7 @@ A full-stack movie management application developed for the **Rapid Application 
 
 Click the links below to view the live application:
 
-- **Frontend (Vercel):** [https://cine-mind-movies-rad-project-git-main-yeharas-projects.vercel.app](https://cine-mind-movies-rad-project-git-main-yeharas-projects.vercel.app)
+- **Frontend (Vercel):** [https://cine-mind-movies-rad-project-n7rysilap-yeharas-projects.vercel.app?_vercel_share=UY3aU71VjrVUzkSeE8s89Xu1YV7i3S1K](https://cine-mind-movies-rad-project-git-main-yeharas-projects.vercel.app)
 - **Backend (Render):** [https://cinemindmovies-rad-project.onrender.com](https://cinemindmovies-rad-project.onrender.com)
 
 ---
@@ -58,9 +58,9 @@ npm install
 ### 3. Frontend Setup
 Navigate to the frontend folder and install dependencies:
 
-
 cd "../RAD Cource work Frontend"
 npm install
+
 ---
 ## 📸 Screenshots
 
