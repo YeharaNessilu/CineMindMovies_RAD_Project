@@ -47,26 +47,21 @@ If you want to run this project locally, follow these steps:
 git clone [https://github.com/YeharaNessilu/CineMindMovies_RAD_Project.git](https://github.com/YeharaNessilu/CineMindMovies_RAD_Project.git)
 cd CineMindMovies_RAD_Project
 
----
-
-
-
-```markdown
-
+### 2. Backend Setup
 Navigate to the backend folder and install dependencies:
 
 ```bash
 cd "RAD Cource work bakend"
 npm install
 
----
+### 3. Frontend Setup
+Navigate to the frontend folder and install dependencies:
 
+```bash
+cd "../RAD Cource work Frontend"
+npm install
 
-
-```markdown
----
-
-
+## 📸 Screenshots
 
 | Login Page | Home Page |
 |------------|-----------|
@@ -74,10 +69,8 @@ npm install
 
 ---
 
-
+## 👤 Author
 
 - **Name:** Yehara Nessilu
 - **Batch:** GDSE-71
 - **Course:** Rapid Application Development (RAD)
-
----
