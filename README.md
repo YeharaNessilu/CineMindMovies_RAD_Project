@@ -49,10 +49,10 @@ cd CineMindMovies_RAD_Project
 
 ---
 
-### **Part 2 (මැද ටික - Part 1 එකට යටින් පේස්ට් කරන්න)**
+
 
 ```markdown
-### 2. Backend Setup
+
 Navigate to the backend folder and install dependencies:
 
 ```bash
@@ -61,12 +61,12 @@ npm install
 
 ---
 
-### **Part 3 (අග ටික - Part 2 එකට යටින් පේස්ට් කරන්න)**
+
 
 ```markdown
 ---
 
-## 📸 Screenshots
+
 
 | Login Page | Home Page |
 |------------|-----------|
@@ -74,7 +74,7 @@ npm install
 
 ---
 
-## 👤 Author
+
 
 - **Name:** Yehara Nessilu
 - **Batch:** GDSE-71
