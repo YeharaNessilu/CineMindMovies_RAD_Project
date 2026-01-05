@@ -46,3 +46,38 @@ If you want to run this project locally, follow these steps:
 ```bash
 git clone [https://github.com/YeharaNessilu/CineMindMovies_RAD_Project.git](https://github.com/YeharaNessilu/CineMindMovies_RAD_Project.git)
 cd CineMindMovies_RAD_Project
+
+---
+
+### **Part 2 (මැද ටික - Part 1 එකට යටින් පේස්ට් කරන්න)**
+
+```markdown
+### 2. Backend Setup
+Navigate to the backend folder and install dependencies:
+
+```bash
+cd "RAD Cource work bakend"
+npm install
+
+---
+
+### **Part 3 (අග ටික - Part 2 එකට යටින් පේස්ට් කරන්න)**
+
+```markdown
+---
+
+## 📸 Screenshots
+
+| Login Page | Home Page |
+|------------|-----------|
+| ![Login](https://via.placeholder.com/300x200?text=Login+Page) | ![Home](https://via.placeholder.com/300x200?text=Home+Page) |
+
+---
+
+## 👤 Author
+
+- **Name:** Yehara Nessilu
+- **Batch:** GDSE-71
+- **Course:** Rapid Application Development (RAD)
+
+---
