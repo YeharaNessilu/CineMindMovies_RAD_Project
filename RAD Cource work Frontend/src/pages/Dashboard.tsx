@@ -46,7 +46,7 @@ const Dashboard = () => {
 
   const fetchMovies = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/movies');
+      const response = await axios.get('http://https://cinemindmovies-rad-project.onrender.com/api/movies');
       setMovies(response.data);
       setIsAiActive(false);
     } catch (error) {
@@ -58,7 +58,7 @@ const Dashboard = () => {
     if (!mood.trim()) return;
     setIsAiLoading(true);
     try {
-      const response = await axios.post('http://localhost:5000/api/movies/mood-search', { mood });
+      const response = await axios.post('http://https://cinemindmovies-rad-project.onrender.com/api/movies/mood-search', { mood });
       setMovies(response.data);
       setIsAiActive(true);
       setMoodInput(mood);
@@ -72,7 +72,7 @@ const Dashboard = () => {
 
   const fetchWatchlist = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/users/watchlist', {
+      const response = await axios.get('http://https://cinemindmovies-rad-project.onrender.com/api/users/watchlist', {
         headers: { Authorization: `Bearer ${token}` }
       });
       const ids = response.data.map((item: any) => item._id);
@@ -88,8 +88,8 @@ const Dashboard = () => {
 
     const isInWatchlist = watchlist.includes(movieId);
     const url = isInWatchlist 
-      ? 'http://localhost:5000/api/users/watchlist/remove' 
-      : 'http://localhost:5000/api/users/watchlist/add';
+      ? 'http://https://cinemindmovies-rad-project.onrender.com/api/users/watchlist/remove' 
+      : 'http://https://cinemindmovies-rad-project.onrender.com/api/users/watchlist/add';
 
     try {
       await axios.put(url, { movieId }, { headers: { Authorization: `Bearer ${token}` } });
@@ -111,7 +111,7 @@ const Dashboard = () => {
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this movie?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/movies/${id}`, {
+        await axios.delete(`http://https://cinemindmovies-rad-project.onrender.com/api/movies/${id}`, {
             headers: { Authorization: `Bearer ${token}` }
         });
         fetchMovies(); 

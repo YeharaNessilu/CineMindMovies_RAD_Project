@@ -18,7 +18,7 @@ const Register = () => {
 
     try {
       // ✅ Role එකත් එක්කම Backend එකට යවනවා
-      await axios.post('http://localhost:5000/api/users/register', {  
+      await axios.post('http://https://cinemindmovies-rad-project.onrender.com/api/users/register', {  
         firstName,
         lastName,
         email,

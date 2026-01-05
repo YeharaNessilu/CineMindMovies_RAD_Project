@@ -30,7 +30,7 @@ const AddMovie = () => {
     const token = localStorage.getItem('token');
 
     try {
-      const response = await axios.post('http://localhost:5000/api/movies/ai-generate', {
+      const response = await axios.post('http://https://cinemindmovies-rad-project.onrender.com/api/movies/ai-generate', {
         title
       }, {
         headers: { Authorization: `Bearer ${token}` }
@@ -58,7 +58,7 @@ const AddMovie = () => {
     const token = localStorage.getItem('token');
 
     try {
-      await axios.post('http://localhost:5000/api/movies', {
+      await axios.post('http://https://cinemindmovies-rad-project.onrender.com/api/movies', {
         title,
         description,
         genre,
