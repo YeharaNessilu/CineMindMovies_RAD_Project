@@ -169,7 +169,14 @@ npm run dev
 ---
 
 ## 📸 Screenshots
-> Screenshots will be added after deployment
+### Home Page
+![Home Page](images/Screenshot 2026-01-05 141819.png)
+
+### Login Page
+![Login Page](images/Screenshot 2026-01-05 141846.png)
+
+### Dashboard
+![Dashboard](images/Screenshot 2026-01-05 141914.png)
 
 ---
 
