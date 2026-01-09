@@ -5,7 +5,7 @@ import connectDB from './config/db.config';
 import userRoutes from './routes/userRoutes';
 import movieRoutes from './routes/movieRoutes';
 
-// ✅ 1. අලුතෙන් හදපු Error Middleware දෙක import කරගන්නවා
+//   අලුතෙන් හදපු Error Middleware දෙක import කරගන්නවා
 import { notFound, errorHandler } from './middleware/errorMiddleware';
 
 // Load env variables
@@ -30,8 +30,8 @@ app.get('/', (req: Request, res: Response) => {
     res.send('CineMind API is Running...');
 });
 
-// ✅ 2. Routes වලට පස්සේ Error Handling Middleware දාන්න ඕනේ
-// (පිළිවෙල වැදගත්: මුලින් notFound, ඊට පස්සේ errorHandler)
+//   Routes වලට පස්සේ Error Handling Middleware දාන්න ඕනේ
+
 app.use(notFound);
 app.use(errorHandler);
 

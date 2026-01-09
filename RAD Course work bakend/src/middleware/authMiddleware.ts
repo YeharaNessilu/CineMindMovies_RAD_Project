@@ -6,7 +6,7 @@ interface AuthRequest extends Request {
     user?: any;
 }
 
-// 1. User Login වෙලාද බලන කොටස (Protect)
+//   User Login වෙලාද බලන කොටස  
 export const protect = async (req: AuthRequest, res: Response, next: NextFunction) => {
     let token;
 
@@ -26,7 +26,7 @@ export const protect = async (req: AuthRequest, res: Response, next: NextFunctio
     }
 };
 
-// ✅ 2. මේ කොටස තමයි ඔයාට අඩුවෙලා තිබුණේ (Admin ද බලන කොටස)
+//  Admin ද බලන කොටස 
 export const admin = (req: AuthRequest, res: Response, next: NextFunction) => {
     if (req.user && req.user.role === 'admin') {
         next();

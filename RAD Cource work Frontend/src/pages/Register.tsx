@@ -9,15 +9,15 @@ const Register = () => {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('user'); // ✅ Role එක තෝරන State එක ඒ විදිහටම තියෙනවා
-  const [error, setError] = useState(''); // Error පෙන්නන්න අලුත් state එකක්
+  const [role, setRole] = useState('user'); //  
+  const [error, setError] = useState('');  
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
 
     try {
-      // ✅ Role එකත් එක්කම Backend එකට යවනවා
+      //   Role එකත් එක්කම Backend එකට යවනවා
       await axios.post('https://cinemindmovies-rad-project.onrender.com/api/users/register', {  
         firstName,
         lastName,
@@ -37,7 +37,7 @@ const Register = () => {
   };
 
   return (
-    // 🌌 1. Background: Dark Gradient (Login එකේ වගේමයි)
+     
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] p-6">
       
       {/* Background Blobs for Glow Effect */}
@@ -46,7 +46,7 @@ const Register = () => {
         <div className="absolute bottom-[10%] right-[10%] w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
       </div>
 
-      {/* 🧊 2. Glass Card Container */}
+      {/*     Glass Card Container */}
       <div className="relative z-10 w-full max-w-md bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl p-8 md:p-10">
         
         {/* Header */}
@@ -114,7 +114,7 @@ const Register = () => {
             />
           </div>
 
-          {/* ✅ 3. Role Selection Dropdown (Glass Style) */}
+          {/*   Role Selection Dropdown (Glass Style) */}
           <div>
             <label className="block text-gray-300 text-xs font-bold mb-2 ml-1 uppercase">Select Role</label>
             <div className="relative">

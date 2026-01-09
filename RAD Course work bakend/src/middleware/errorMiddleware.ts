@@ -1,13 +1,13 @@
 import { Request, Response, NextFunction } from 'express';
 
-// 1. වැරදි URL එකක් ගැහුවොත් (Not Found Error)
+//   වැරදි URL එකක් ගැහුවොත් (Not Found Error)
 export const notFound = (req: Request, res: Response, next: NextFunction) => {
   const error = new Error(`Not Found - ${req.originalUrl}`);
   res.status(404);
   next(error);
 };
 
-// 2. අනිත් ඕනම Error එකක් ආවොත් (Global Error Handler)
+//   අනිත් ඕනම Error එකක් ආවොත් (Global Error Handler)
 export const errorHandler = (err: any, req: Request, res: Response, next: NextFunction) => {
   const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
   res.status(statusCode);

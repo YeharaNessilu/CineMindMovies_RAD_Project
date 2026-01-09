@@ -12,12 +12,12 @@ const AddMovie = () => {
   const [releaseDate, setReleaseDate] = useState('');
   const [rating, setRating] = useState('');
   const [image, setImage] = useState('');
-  const [telegramLink, setTelegramLink] = useState(''); // ✅ අලුත් State එක (Telegram Link)
+  const [telegramLink, setTelegramLink] = useState('');  
   const [error, setError] = useState(''); 
 
   const [isGenerating, setIsGenerating] = useState(false);
 
-  // 🤖 AI Function
+  //   AI Function
   const handleAIGenerate = async () => {
     if (!title) {
       alert("Please enter a Movie Title first!");
@@ -65,7 +65,7 @@ const AddMovie = () => {
         releaseDate,
         rating: Number(rating),
         image,
-        telegramLink // ✅ Save කරනකොට Telegram Link එකත් යවනවා
+        telegramLink //   Save කරනකොට Telegram Link එකත් යවනවා
       }, {
         headers: {
           Authorization: `Bearer ${token}`
@@ -200,7 +200,7 @@ const AddMovie = () => {
             </div>
           </div>
 
-          {/* ✅ Telegram Link Input Field */}
+          {/*   Telegram Link Input Field */}
           <div>
             <label className="block text-gray-300 text-xs font-bold mb-2 ml-1 uppercase text-blue-300">Telegram Download Link 📥</label>
             <input 

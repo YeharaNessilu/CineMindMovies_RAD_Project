@@ -1,7 +1,7 @@
 import mongoose, { Schema, Document } from 'mongoose';
 import bcrypt from 'bcryptjs'; 
 
-// 1. User කෙනෙක්ට තියෙන්න ඕන දේවල් (Interface)
+//   User කෙනෙක්ට තියෙන්න ඕන දේවල්  
 export interface IUser extends Document {
     firstName: string;
     lastName: string;
@@ -11,7 +11,7 @@ export interface IUser extends Document {
     watchlist: mongoose.Types.ObjectId[];
 }
 
-// 2. Database එකට දාන හැඩය (Schema)
+//   Database එකට දාන හැඩය (Schema)
 const UserSchema: Schema = new Schema({
     firstName: { 
         type: String, 
@@ -45,8 +45,9 @@ const UserSchema: Schema = new Schema({
     timestamps: true 
 });
 
-// ✅ නිවැරදි කිරීම: 'next' සම්පූර්ණයෙන්ම අයින් කළා.
-// async function එකක් නිසා දැන් Mongoose ඉබේම දන්නවා වැඩේ ඉවරයි කියලා.
+// Password එක save කරන්න කලින් hash කරන්න ඕනේ.
+
+ 
 UserSchema.pre('save', async function (this: IUser) {
     if (!this.isModified('password')) {
         return;
@@ -55,5 +56,5 @@ UserSchema.pre('save', async function (this: IUser) {
     this.password = await bcrypt.hash(this.password, salt);
 });
 
-// 3. Model එක export කිරීම
+//   Model එක export කිරීම
 export default mongoose.model<IUser>('User', UserSchema);

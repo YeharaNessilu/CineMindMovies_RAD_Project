@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { useDispatch } from 'react-redux'; // ✅ 1. Import useDispatch
-import { setCredentials } from '../redux/authSlice'; // ✅ 2. Import the action
+import { useDispatch } from 'react-redux'; //    Import useDispatch
+import { setCredentials } from '../redux/authSlice'; //   Import the action
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -10,7 +10,7 @@ const Login = () => {
   const [error, setError] = useState('');
   
   const navigate = useNavigate();
-  const dispatch = useDispatch(); // ✅ 3. Initialize dispatch
+  const dispatch = useDispatch(); //   Initialize dispatch
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,7 +22,7 @@ const Login = () => {
         password
       });
 
-      // ✅ 4. Instead of setting localStorage manually, we dispatch to Redux
+      //   Instead of setting localStorage manually, we dispatch to Redux
       // The authSlice we wrote earlier will handle saving to localStorage automatically
       dispatch(setCredentials({
         user: response.data,
@@ -40,7 +40,7 @@ const Login = () => {
   };
 
   return (
-    // ... (UI code remains exactly the same)
+    
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] p-6">
       
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">

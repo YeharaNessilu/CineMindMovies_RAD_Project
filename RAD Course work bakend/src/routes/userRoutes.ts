@@ -3,35 +3,33 @@ import express from 'express';
 import { 
     registerUser, 
     loginUser,
-    addToWatchlist,      // ✅ 1. අලුත් function import කළා
-    removeFromWatchlist, // ✅ 1. අලුත් function import කළා
-    getMyWatchlist       // ✅ 1. අලුත් function import කළා
+    addToWatchlist,      
+    removeFromWatchlist, 
+    getMyWatchlist       
 } from '../controller/userController';
 
-import { protect } from '../middleware/authMiddleware'; // ✅ 2. Login වෙලාද බලන protect එක ගත්තා
+import { protect } from '../middleware/authMiddleware'; //  Login වෙලාද බලන protect එක ගත්තා
 import { getAdminStats } from '../controller/userController'; 
 import {  admin } from '../middleware/authMiddleware';
 
 const router = express.Router();
 
-// Register & Login (කලින් තිබ්බ ඒවා)
+// Register & Login  
 router.post('/register', registerUser);
 router.post('/login', loginUser);
 
-// --- Watchlist Routes (අලුත් ඒවා) ---
+ 
 
-// 3. Watchlist එකට දාන්න (Login වෙලා ඉන්න ඕනේ)
-// URL: /api/users/watchlist/add
-router.put('/watchlist/add', protect, addToWatchlist);
+//  Watchlist එකට දාන්න (Login වෙලා ඉන්න ඕනේ)
+ router.put('/watchlist/add', protect, addToWatchlist);
 
-// 4. Watchlist එකෙන් අයින් කරන්න
-// URL: /api/users/watchlist/remove
-router.put('/watchlist/remove', protect, removeFromWatchlist);
+//  Watchlist එකෙන් අයින් කරන්න
+ router.put('/watchlist/remove', protect, removeFromWatchlist);
 
-// 5. මගේ Watchlist එක බලන්න
-// URL: /api/users/watchlist
+//  මගේ Watchlist එක බලන්න
 router.get('/watchlist', protect, getMyWatchlist);
 
+//  Admin Stats එක ගන්න
 router.get('/stats', protect, admin, getAdminStats);
 
 export default router;

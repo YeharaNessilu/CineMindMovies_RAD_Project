@@ -24,7 +24,7 @@ const Dashboard = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [watchlist, setWatchlist] = useState<string[]>([]);
   
-  // ✅ 1. Filter States (Dropdowns සඳහා)
+  //   Filter States (Dropdowns සඳහා)
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('All');
   const [selectedYear, setSelectedYear] = useState('All');   // Year Filter
@@ -122,11 +122,11 @@ const Dashboard = () => {
     }
   };
 
-  // ✅ Helper: අලුත් Unique Years ලිස්ට් එක හදාගැනීම
+  //   Helper: අලුත් Unique Years ලිස්ට් එක හදාගැනීම
   const uniqueGenres = ['All', ...new Set(movies.map((movie) => movie.genre))];
   const uniqueYears = ['All', ...new Set(movies.map((movie) => movie.releaseDate.split('-')[0]))].sort().reverse();
 
-  // ✅ 2. Updated Filtering Logic (Year & Rating Selectors)
+  //  . Updated Filtering Logic (Year & Rating Selectors)
   const filteredMovies = movies.filter((movie) => {
     // Search
     const matchesSearch = movie.title.toLowerCase().includes(searchQuery.toLowerCase());
@@ -211,7 +211,7 @@ const Dashboard = () => {
                 {isAiActive ? '✨ AI Recommendations' : '🔥 Trending Now'}
             </h2>
             
-            {/* ✅ 3. New Dropdowns (Search, Year, Rating, Genre) */}
+            {/*   New Dropdowns (Search, Year, Rating, Genre) */}
             <div className="flex flex-wrap gap-3 items-center justify-center lg:justify-end w-full lg:w-auto">
                  
                  {/* Search Input */}

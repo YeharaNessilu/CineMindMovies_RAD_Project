@@ -20,7 +20,7 @@ const AdminStats = () => {
   }, []);
 
   return (
-    // ✅ වෙනස: Button එක අයින් කළ නිසා, කාඩ් දෙක ලස්සනට පේන්න grid-cols-3 වෙනුවට grid-cols-2 දැම්මා.
+    
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
       
       {/* Total Movies Card */}
@@ -41,7 +41,7 @@ const AdminStats = () => {
         <div className="bg-white/10 p-4 rounded-full text-3xl">👤</div>
       </div>
 
-      {/* ❌ Button එක මෙතනින් අයින් කළා */}
+      {}
       
     </div>
   );

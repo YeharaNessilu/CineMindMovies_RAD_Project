@@ -11,7 +11,7 @@ interface Movie {
   rating: number;
   image?: string;
   telegramLink?: string; 
-  trailerLink?: string; // ✅ 1. Trailer Link එක Interface එකට දැම්මා
+  trailerLink?: string;  
 }
 
 const MovieDetails = () => {
@@ -95,7 +95,7 @@ const MovieDetails = () => {
               {movie.description}
             </p>
 
-            {/* ✅ 2. Action Buttons Section (Download & Trailer) */}
+            {/*   Action Buttons Section (Download & Trailer) */}
             <div className="flex flex-wrap gap-4">
               
               {/* Telegram Button */}
@@ -114,7 +114,7 @@ const MovieDetails = () => {
                 </button>
               )}
 
-              {/* ✅ 3. Watch Trailer Button */}
+              {/*  Watch Trailer Button */}
               {movie.trailerLink ? (
                 <a 
                   href={movie.trailerLink} 

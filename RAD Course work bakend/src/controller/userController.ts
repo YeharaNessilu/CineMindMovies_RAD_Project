@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import User from '../models/userModel';
-import Movie from '../models/movie.model'; // ✅ 1. Movie Model එක import කළා
+import Movie from '../models/movie.model';  
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
@@ -11,7 +11,7 @@ const generateToken = (id: string) => {
     });
 };
 
-// 1. User Register කරන function එක
+//   User Register කරන function එක
 export const registerUser = async (req: Request, res: Response): Promise<void> => {
     try {
         const { firstName, lastName, email, password, role } = req.body;
@@ -38,7 +38,7 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
     }
 }
 
-// 2. User Login කරන function එක
+//   User Login කරන function එක
 export const loginUser = async (req: Request, res: Response): Promise<void> => {
     try {
         const { email, password } = req.body;
@@ -57,7 +57,7 @@ export const loginUser = async (req: Request, res: Response): Promise<void> => {
     }
 };
 
-// 3. Watchlist Add
+//   Watchlist Add
 export const addToWatchlist = async (req: Request, res: Response): Promise<void> => {
     try {
         const userId = (req as any).user._id; 
@@ -71,7 +71,7 @@ export const addToWatchlist = async (req: Request, res: Response): Promise<void>
     }
 };
 
-// 4. Watchlist Remove
+// Watchlist Remove
 export const removeFromWatchlist = async (req: Request, res: Response): Promise<void> => {
     try {
         const userId = (req as any).user._id;
@@ -85,7 +85,7 @@ export const removeFromWatchlist = async (req: Request, res: Response): Promise<
     }
 };
 
-// 5. Get Watchlist
+//   Get Watchlist
 export const getMyWatchlist = async (req: Request, res: Response): Promise<void> => {
     try {
         const userId = (req as any).user._id;
@@ -100,7 +100,7 @@ export const getMyWatchlist = async (req: Request, res: Response): Promise<void>
     }
 };
 
-// ✅ 6. Admin Stats ගන්න Function එක (අලුතෙන් දැම්මා)
+//   Admin Stats ගන්න Function එක  
 export const getAdminStats = async (req: Request, res: Response): Promise<void> => {
     try {
         // Users සහ Movies ගණන් කරනවා

@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import Movie from '../models/movie.model';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-// 1. ඔක්කොම Movies ටික ගන්න (GET All)
+//   ඔක්කොම Movies ටික ගන්න  
 export const getMovies = async (req: Request, res: Response): Promise<void> => {
     try {
         const movies = await Movie.find();
@@ -12,7 +12,7 @@ export const getMovies = async (req: Request, res: Response): Promise<void> => {
     }
 };
 
-// 2. තනි Movie එකක් ID එකෙන් ගන්න (GET Single)
+//   තනි Movie එකක් ID එකෙන් ගන්න  
 export const getMovieById = async (req: Request, res: Response): Promise<void> => {
     try {
         const { id } = req.params;
@@ -29,7 +29,7 @@ export const getMovieById = async (req: Request, res: Response): Promise<void> =
     }
 };
 
-// ✅ 3. අලුත් Movie එකක් දාන්න (POST) - Links Explicitly Add කළා
+//   අලුත් Movie එකක් දාන්න (POST) - Links Explicitly Add කළා
 export const createMovie = async (req: Request, res: Response): Promise<void> => {
     try {
         // Body එකෙන් අපිට ඕන ටික විතරක් තෝරලා ගන්නවා
@@ -42,8 +42,8 @@ export const createMovie = async (req: Request, res: Response): Promise<void> =>
             releaseDate,
             rating,
             image,
-            telegramLink, // ✅ Telegram Link
-            trailerLink   // ✅ Trailer Link
+            telegramLink,  
+            trailerLink    
         });
 
         await newMovie.save();
@@ -53,7 +53,7 @@ export const createMovie = async (req: Request, res: Response): Promise<void> =>
     }
 };
 
-// ✅ 4. තියෙන Movie එකක් වෙනස් කරන්න (PUT) - Links Explicitly Update කළා
+//   තියෙන Movie එකක් වෙනස් කරන්න (PUT)  
 export const updateMovie = async (req: Request, res: Response): Promise<void> => {
     try {
         const { id } = req.params;
@@ -69,8 +69,8 @@ export const updateMovie = async (req: Request, res: Response): Promise<void> =>
                 releaseDate, 
                 rating, 
                 image, 
-                telegramLink, // ✅ Update වෙනවා
-                trailerLink   // ✅ Update වෙනවා
+                telegramLink,  
+                trailerLink    
             }, 
             { new: true }
         );
@@ -105,7 +105,7 @@ export const generateMovieDetails = async (req: Request, res: Response): Promise
 
         // Gemini එකට කතා කරනවා
         const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY as string);
-        // Note: 'gemini-2.5-flash' තාම නැති නිසා 'gemini-1.5-flash' පාවිච්චි කරමු
+        
         const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
         const prompt = `Provide the following details for the movie "${title}" in strict JSON format:
@@ -132,26 +132,26 @@ export const generateMovieDetails = async (req: Request, res: Response): Promise
     }
 };
 
-// ✅ 7. MOOD BASED SEARCH (මේක තමයි අලුතෙන් දැම්මේ)
+//   MOOD BASED SEARCH (මේක තමයි අලුතෙන් දැම්මේ)
 export const getMoviesByMood = async (req: Request, res: Response): Promise<void> => {
     try {
-        const { mood } = req.body; // Frontend එකෙන් එන Mood එක (Happy, Sad, Action...)
+        const { mood } = req.body; // Frontend එකෙන් එන Mood එක  
 
         if (!mood) {
             res.status(400).json({ message: 'Mood is required' });
             return;
         }
 
-        // 1. Database එකේ තියෙන ෆිල්ම් ටික ගන්නවා (ID, Title, Genre, Description විතරයි)
+        //   Database එකේ තියෙන ෆිල්ම් ටික ගන්නවා (ID, Title, Genre, Description විතරයි)
         const allMovies = await Movie.find({}, 'title genre description _id');
 
-        // 2. AI එකට යවන්න සූදානම් කරනවා
+        //   AI එකට යවන්න සූදානම් කරනවා
         const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY as string);
         
-        // 🔥 ඔයාට හරියන Model එක මෙතන දැම්මා
+         
         const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
-        // 3. AI Prompt එක (Mood එකට ගැලපෙන ෆිල්ම්ස් තෝරන්න කියනවා)
+        //   AI Prompt එක (Mood එකට ගැලපෙන ෆිල්ම්ස් තෝරන්න කියනවා)
         const prompt = `
         I have a user who is in a "${mood}" mood.
         Here is a list of movies available in my database: 
@@ -167,11 +167,11 @@ export const getMoviesByMood = async (req: Request, res: Response): Promise<void
         const response = await result.response;
         const text = response.text();
 
-        // 4. AI දුන්න උත්තරේ (IDs List එක) සුද්ද කරලා ගන්නවා
+        //   AI දුන්න උත්තරේ (IDs List එක) සුද්ද කරලා ගන්නවා
         const cleanedText = text.replace(/```json/g, '').replace(/```/g, '').trim();
         const recommendedIds = JSON.parse(cleanedText);
 
-        // 5. ඒ IDs වලට අදාළ ෆිල්ම්ස් Database එකෙන් අරන් යවනවා
+        //   ඒ IDs වලට අදාළ ෆිල්ම්ස් Database එකෙන් අරන් යවනවා
         const recommendedMovies = await Movie.find({ _id: { $in: recommendedIds } });
 
         res.status(200).json(recommendedMovies);

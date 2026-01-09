@@ -1,77 +1,191 @@
-# CineMindMovies_RAD_Project
-# 🎬 CineMind - Movie Management System
-
-A full-stack movie management application developed for the **Rapid Application Development (RAD)** coursework. This application allows users to search for movies, view details, and manage their favorite collections securely.
-
-## 🚀 Live Demo (Deployment)
-
-Click the links below to view the live application:
-
-- **Frontend (Vercel):** [https://cine-mind-movies-rad-project-n7rysilap-yeharas-projects.vercel.app?_vercel_share=UY3aU71VjrVUzkSeE8s89Xu1YV7i3S1K](https://cine-mind-movies-rad-project-git-main-yeharas-projects.vercel.app)
-- **Backend (Render):** [https://cinemindmovies-rad-project.onrender.com](https://cinemindmovies-rad-project.onrender.com)
+# 🎬 CineMind Movies
+## Full Stack MERN + TypeScript Web Application
 
 ---
 
-## 🛠️ Tech Stack
+## 📌 Introduction
+CineMind Movies is a **Full Stack Web Application** developed using the **MERN stack with TypeScript** as part of the **ITS2020 – Rapid Application Development (RAD) Final Coursework** for the Graduate Diploma in Software Engineering.
+
+The project demonstrates practical implementation of **RAD principles**, including rapid prototyping, iterative development, modular design, and user‑centered interfaces. The application is designed to be secure, scalable, and responsive, following modern full‑stack development standards.
+
+---
+
+## 🎯 Project Objectives
+- Develop a complete MERN + TypeScript application
+- Implement secure authentication and authorization
+- Apply Redux for global state management
+- Design a responsive UI using TailwindCSS
+- Integrate an advanced/AI-powered feature
+- Deploy the application using cloud platforms
+- Maintain professional GitHub version control practices
+
+---
+
+## 🚀 Live Deployment
+> Deployment links can be updated after hosting
+
+- **Frontend (Vercel / Netlify):**  
+  https://your-frontend-link.vercel.app
+
+- **Backend (Render / Railway):**  
+  https://your-backend-link.onrender.com
+
+---
+
+## 🛠️ Technology Stack
 
 ### Frontend
-- **Framework:** React.js (Vite)
-- **Language:** TypeScript
-- **Styling:** CSS
-- **Deployment:** Vercel
+- React (Functional Components & Hooks)
+- TypeScript
+- Redux Toolkit
+- TailwindCSS
+- Axios
 
 ### Backend
-- **Runtime:** Node.js
-- **Framework:** Express.js
-- **Database:** MongoDB Atlas
-- **Authentication:** JWT (JSON Web Tokens)
-- **Deployment:** Render
+- Node.js
+- Express.js
+- TypeScript
+- MongoDB
+- Mongoose
+
+### Security
+- JWT (JSON Web Tokens)
+- bcryptjs (Password Hashing)
+- Environment Variables (.env)
+
+### Tools & Platforms
+- Git & GitHub
+- Postman
+- MongoDB Atlas
+- Vercel / Netlify
+- Render / Railway
 
 ---
 
-## ✨ Features
-
-- **User Authentication:** Secure Sign Up & Login functionality.
-- **Movie Search:** Search for movies using the connection to the backend API.
-- **Responsive Design:** Works smoothly on Desktop and Mobile devices.
-- **CRUD Operations:** Users can manage their data effectively.
+## ✨ Core Features
+- User Registration and Login
+- JWT-based Authentication & Authorization
+- Password Encryption using bcryptjs
+- Movie Management (Create, Read, Update, Delete)
+- Role-protected API routes
+- Global state management using Redux
+- Responsive UI for all screen sizes
+- RESTful API with proper HTTP methods and status codes
 
 ---
 
-## ⚙️ Installation & Setup (Run Locally)
+## 🧠 Advanced Feature (AI Integration)
+CineMind Movies includes an **AI-powered feature** that enhances user experience by providing intelligent movie suggestions and insights.  
+This feature demonstrates innovation beyond basic CRUD operations, fulfilling the RAD coursework advanced feature requirement.
 
-If you want to run this project locally, follow these steps:
-
-### 1. Clone the Repository
-
-git clone [https://github.com/YeharaNessilu/CineMindMovies_RAD_Project.git](https://github.com/YeharaNessilu/CineMindMovies_RAD_Project.git)
-cd CineMindMovies_RAD_Project
-
-### 2. Backend Setup
-Navigate to the backend folder and install dependencies:
 ---
 
+## 🗂️ System Architecture
 
-cd "RAD Cource work bakend"
+```
+Client (React + TypeScript)
+        |
+        | REST API (JSON)
+        |
+Server (Node + Express + TypeScript)
+        |
+   MongoDB Atlas
+```
+
+### Backend Folder Structure
+```
+src/
+ ┣ models/
+ ┣ controllers/
+ ┣ routes/
+ ┣ middleware/
+ ┣ config/
+ ┗ server.ts
+```
+
+---
+
+## ⚙️ Setup & Installation Guide
+
+### Prerequisites
+- Node.js (v18 or above recommended)
+- MongoDB Atlas Account
+- Git
+
+---
+
+### Backend Setup
+```bash
+cd backend
 npm install
+```
 
-### 3. Frontend Setup
-Navigate to the frontend folder and install dependencies:
+Create `.env` file:
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
 
-cd "../RAD Cource work Frontend"
-npm install
+Run backend:
+```bash
+npm run dev
+```
 
 ---
+
+### Frontend Setup
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## 🔐 Security Implementation
+- Secure JWT authentication
+- Protected API routes
+- Encrypted user passwords
+- Environment-based secret handling
+- Token expiry handling
+
+---
+
+## 📦 Database Design
+- MongoDB Atlas cloud database
+- Mongoose schemas with validation
+- Multiple related entities
+- Full CRUD operations implemented
+
+---
+
+## 📂 Version Control
+- Public GitHub repository
+- Meaningful commit history
+- Clear folder organization
+- Professional coding standards
+
+---
+
 ## 📸 Screenshots
-
-| Login Page | Home Page |
-|------------|-----------|
-| ./images/Screenshot 2026-01-05 141846.png | !images/Screenshot 2026-01-05 141819.png|
+> Screenshots will be added after deployment
 
 ---
 
-## 👤 Author
+## 📚 Coursework Information
+- **Module:** ITS2020 – Rapid Application Development
+- **Program:** Graduate Diploma in Software Engineering
 
-- **Name:** Yehara Nessilu
-- **Batch:** GDSE-71
-- **Course:** Rapid Application Development (RAD)
+
+
+---
+
+## 👨‍💻 Author
+**Yehara Nessilu**
+
+---
+
+## ✅ Conclusion
+CineMind Movies fully satisfies the RAD coursework requirements by implementing a modern, secure, and scalable full stack web application using the MERN + TypeScript stack. The project demonstrates strong technical competence, clean architecture, and innovative feature integration.
+

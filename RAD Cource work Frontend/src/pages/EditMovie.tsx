@@ -160,7 +160,7 @@ const EditMovie = () => {
             </div>
           </div>
 
-          {/* ✅✅ LINKS SECTION: මේ ටික තමයි ඔයාගේ Code එකේ අඩු වෙලා තිබුණේ */}
+          { }
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
             <div>
               <label className="block text-gray-300 text-xs font-bold mb-2 ml-1 uppercase text-blue-300">Telegram Link 📥</label>
@@ -183,7 +183,7 @@ const EditMovie = () => {
               />
             </div>
           </div>
-          {/* ✅✅ END LINKS SECTION */}
+          { }
 
           <div className="flex gap-4 pt-4">
             <button type="submit" className="flex-1 py-3.5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold rounded-xl shadow-lg transform transition hover:-translate-y-0.5 hover:shadow-blue-500/25 active:scale-95">

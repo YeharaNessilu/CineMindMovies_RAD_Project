@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Watchlist from './pages/Watchlist'; // 1. උඩින්ම Import කරන්න
+import Watchlist from './pages/Watchlist';  
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import AddMovie from './pages/AddMovie';
 import EditMovie from './pages/EditMovie';
-import MovieDetails from './pages/MovieDetails'; // ✅ 1. මේක අලුතෙන් එකතු වුනා
+import MovieDetails from './pages/MovieDetails';  
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Route path="/add-movie" element={<AddMovie />} />
         <Route path="/edit-movie/:id" element={<EditMovie />} />
         
-        {/* ✅ 2. ෆිල්ම් එකක් Click කළාම යන පාර මෙතනින් හැදුවා */}
+        {/*   ෆිල්ම් එකක් Click කළාම යන පාර මෙතනින් හැදුවා */}
         <Route path="/movie/:id" element={<MovieDetails />} />
       </Routes>
     </Router>
