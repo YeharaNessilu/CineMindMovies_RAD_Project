@@ -25,10 +25,10 @@ The project demonstrates practical implementation of **RAD principles**, includi
 > Deployment links can be updated after hosting
 
 - **Frontend (Vercel / Netlify):**  
-  https://your-frontend-link.vercel.app
+  https://cine-mind-movies-rad-project-git-main-yeharas-projects.vercel.app?_vercel_share=1xPZRAkncnEASyBs7017n762w4ExWqG0
 
 - **Backend (Render / Railway):**  
-  https://your-backend-link.onrender.com
+ https://cinemindmovies-rad-project.onrender.com
 
 ---
 
